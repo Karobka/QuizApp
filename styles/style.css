@@ -77,7 +77,20 @@ h1 {
 }
 
 #choices {
-    height: 12em;
+    height: 22em;
+    text-align: center;
+}
+
+#choice1,
+#choice2,
+#choice3,
+#choice4 {
+    height: 15em;
+    width: 15em;
+    display: inline-block;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 2em;
 }
 
 .mefooter > li {
