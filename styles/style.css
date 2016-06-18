@@ -59,9 +59,13 @@ h1 {
 }
 
 
-#questionbox,
-.mefooter {
+#questionbox {
     height: 4em;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.mefooter {
+    height: 2em;
     background: rgba(0, 0, 0, 0.5);
 }
 
@@ -77,28 +81,57 @@ h1 {
 }
 
 #choices {
-    height: 22em;
+    height: 19em;
     text-align: center;
+}
+
+#california {
+    width: 10em;
 }
 
 #choice1,
 #choice2,
 #choice3,
 #choice4 {
-    height: 15em;
+    height: 6em;
     width: 15em;
     display: inline-block;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    margin: 2em;
+    background: rgb(37, 57, 80);
+    border-radius: 3px;
+    margin: 1em;
+    font-size: 1em;
+    line-height: 100px;
+    border: 1px solid black;
 }
+
+#choice1:hover,
+#choice2:hover,
+#choice3:hover,
+#choice4:hover {
+    border: 1px solid #35421e;
+    cursor: pointer;
+}
+
+span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    font-size: x-large;
+}
+
 
 .mefooter > li {
     font-size: 1em;
     display: inline-block;
-    margin: 1.2em 4.8em;
+    margin: 0.5em 4.8em;
     text-align: center;
     font-weight: 100;
+}
+
+.mefooter {
+    border-top: 1px solid #35421e;
+    border-bottom: 1px solid #35421e;
 }
 
 
