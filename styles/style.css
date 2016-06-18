@@ -69,6 +69,10 @@ h1 {
     background: rgba(0, 0, 0, 0.5);
 }
 
+#statsquestionslist {
+    display: none;  /** toggle on in jQuery **/
+}
+
 #statsquestionslist > li {
     font-size: 1.2em;
     display: inline-block;
@@ -89,15 +93,16 @@ h1 {
     width: 10em;
 }
 
+#clicktobegin,
 #choice1,
 #choice2,
 #choice3,
 #choice4 {
     height: 6em;
     width: 15em;
-    display: inline-block;
+    display: none; /** toggle to inlin-block in JS **/
     text-align: center;
-    background: rgb(37, 57, 80);
+    background: #253950;
     border-radius: 3px;
     margin: 1em;
     font-size: 1em;
@@ -105,11 +110,25 @@ h1 {
     border: 1px solid black;
 }
 
+#clicktobegin:hover,
 #choice1:hover,
 #choice2:hover,
 #choice3:hover,
 #choice4:hover {
     border: 1px solid #35421e;
+    cursor: pointer;
+}
+
+button {
+    border-radius: 3px;
+    background: #516173;
+    text-decoration: none;
+    border: 1px solid #000000;
+    display: none;  /** toggle visibility in jQuery **/
+}
+
+button:hover {
+    background: #74818F;
     cursor: pointer;
 }
 
@@ -120,13 +139,18 @@ span {
     font-size: x-large;
 }
 
+/**.instructions {
+    font-size: 1em;
+    display: none; /** toggle on in jQuery
+}**/
+
 
 .mefooter > li {
     font-size: 1em;
     display: inline-block;
     margin: 0.5em 4.8em;
     text-align: center;
-    font-weight: 100;
+
 }
 
 .mefooter {
