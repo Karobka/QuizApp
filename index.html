@@ -24,10 +24,10 @@
         </section>
         
     </div>
-    <section id="questionbox">
-            <div id="questiontext">
+    <section id="statsbox">
+            <div id="statsboxinfo">
                 <span>Score: <span id="score">100</span></span>
-                <span>Question #1: In which state is the Sequoia National Park?</span>
+                <span id="questiontext">Question #1: In which state is the Sequoia National Park?</span>
                 <span id="questioncount">5 questions left</span>
             </div>
     </section>
@@ -38,19 +38,20 @@
         <div id="clicktobegin">
             <span>Click To Begin</span>
         </div>
-        <div id="choice1">
-            <span>Washington</span>
-            <!--<img title="This is my tooltip" id="california" class="state" src="images/california.png">-->
-        </div>
-        <div id="choice2">
-            <span>Hawaii</span>
-        </div>
-        <div id="choice3">
-            <span>California</span>
-        </div>
-        <div id="choice4">
-            <span>Montana</span>
-        </div>
+        <ul id="multiplechoices">
+            <li>
+                Washington
+            </li>
+            <li>
+                <span>Hawaii</span>
+            </li>
+            <li id="choice3">
+                <span>California</span>
+            </li>
+            <li id="choice4">
+                <span>Montana</span>
+            </li>
+        </ul>
         <div id="submitdiv">
             <button><span>Submit Answer</span></button>
         </div>

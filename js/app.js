@@ -61,18 +61,15 @@ $(document).ready(function() {
     $("#clicktobegin").css("display", "inline-block");
     $("#clicktobegin").on("click", function(event){
         $(this).css("display", "none");
-        $("#questiontext").css('display', 'block');
-        $("#choice1").css("display", "inline-block");
-        $("#choice2").css("display", "inline-block");
-        $("#choice3").css("display", "inline-block");
-        $("#choice4").css("display", "inline-block");
+        $("#statsboxinfo").css('display', 'block');
+        $("#multiplechoices".li).css("display", "inline-block");
         $("button").css("display", "inline-block");
-        $(".instructions").css("display", "inline-block");
+        newQuestion();
         makeChoice();
     });
 
 newQuestion = function() {
-    $()
+    $("#questiontext").text(questionsArray.question)
 }
 
 });

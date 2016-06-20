@@ -59,7 +59,7 @@ h1 {
 }
 
 
-#questionbox {
+#statsbox {
     height: 4em;
     background: rgba(0, 0, 0, 0.5);
 }
@@ -69,17 +69,12 @@ h1 {
     background: rgba(0, 0, 0, 0.5);
 }
 
-#questiontext {
+#statsboxinfo {
     display: none;  /** toggle on in jQuery **/
 }
 
-#statsquestionslist > li {
-    font-size: 1.2em;
-    display: inline-block;
-    margin: 1.2em 4.8em;
-}
 
-#questiontext,
+#statsboxinfo,
 .mefooter {
     text-align: center;
 }
@@ -94,12 +89,9 @@ h1 {
 }
 
 #clicktobegin,
-#choice1,
-#choice2,
-#choice3,
-#choice4 {
-    height: 6em;
-    width: 15em;
+#multiplechoices > li {
+    height: 4em;
+    width: 11em;
     display: none; /** toggle to inlin-block in JS **/
     text-align: center;
     background: #253950;
@@ -108,13 +100,13 @@ h1 {
     font-size: 1em;
     line-height: 100px;
     border: 1px solid black;
+    vertical-align: middle;
+    line-height: normal;
+    font-size: x-large;
 }
 
 #clicktobegin:hover,
-#choice1:hover,
-#choice2:hover,
-#choice3:hover,
-#choice4:hover {
+#multiplechoices > li:hover{
     border: 1px solid #35421e;
     cursor: pointer;
 }
@@ -132,7 +124,8 @@ button:hover {
     cursor: pointer;
 }
 
-span {
+span,
+#multiplechoices > li {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
