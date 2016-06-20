@@ -1,16 +1,15 @@
 "use strict";
 $(document).ready(function() {
-    $("#clicktobegin").css("display", "inline-block");
-    $("#clicktobegin").on("click", function(event){
-        $(this).css("display", "none");
-        $("#statsquestionslist").css('display', 'block');
-        $("#choice1").css("display", "inline-block");
-        $("#choice2").css("display", "inline-block");
-        $("#choice3").css("display", "inline-block");
-        $("#choice4").css("display", "inline-block");
-        $("button").css("display", "inline-block");
-        $(".instructions").css("sidplay", "inline-block");
-    });
+/** Click to begin
+ * Load Score, load first question, load choices from array,
+ * load questions remaining number,
+ * If user clicks on correct answer show correct! message.
+ *  and increment score +5
+ *      else show incorrect message
+ *      and decrement score -5
+ * Increment to next question and answer array until the end of the array.
+ * Display final score and new game button.
+ */
 
     var questionsArray = [
         {
@@ -59,4 +58,21 @@ $(document).ready(function() {
             correctAnswer: "Montana"
         }
     ]
+    $("#clicktobegin").css("display", "inline-block");
+    $("#clicktobegin").on("click", function(event){
+        $(this).css("display", "none");
+        $("#questiontext").css('display', 'block');
+        $("#choice1").css("display", "inline-block");
+        $("#choice2").css("display", "inline-block");
+        $("#choice3").css("display", "inline-block");
+        $("#choice4").css("display", "inline-block");
+        $("button").css("display", "inline-block");
+        $(".instructions").css("display", "inline-block");
+        makeChoice();
+    });
+
+newQuestion = function() {
+    $()
+}
+
 });
