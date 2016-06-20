@@ -10,10 +10,10 @@ $(document).ready(function() {
  * Increment to next question and answer array until the end of the array.
  * Display final score and new game button.
  */
-
+    var currentQuestion = 0;
     var questionsArray = [
         {
-            question: "Question #1: In which state is the Sequoia National Park?",
+            question: "Question #1: YES In which state is the Sequoia National Park?",
             choicesArray: ["Utah", "Arkansas", "California", "Idaho"],
             correctAnswer: "California"
         },
@@ -68,8 +68,12 @@ $(document).ready(function() {
         makeChoice();
     });
 
-newQuestion = function() {
-    $("#questiontext").text(questionsArray.question)
+function newQuestion() {
+    $("#questiontext").text(questionsArray[currentQuestion].question);
+    for (var i=0; i<questionsArray[currentQuestion].choicesArray.length; i++){
+        $("#multiplechoices").append("<li>" + questionsArray[currentQuestion].choicesArray[i] + "</li>");
+    }
 }
+
 
 });
