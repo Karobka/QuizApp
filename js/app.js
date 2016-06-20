@@ -11,6 +11,7 @@ $(document).ready(function() {
  * Display final score and new game button.
  */
     var currentQuestion = 0;
+    var currentScore = 0;
     var questionsArray = [
         {
             question: "Question #1: YES In which state is the Sequoia National Park?",
@@ -65,7 +66,6 @@ $(document).ready(function() {
         $("#multiplechoices".li).css("display", "inline-block");
         $("button").css("display", "inline-block");
         newQuestion();
-        makeChoice();
     });
 
 function newQuestion() {
@@ -74,6 +74,31 @@ function newQuestion() {
         $("#multiplechoices").append("<li>" + questionsArray[currentQuestion].choicesArray[i] + "</li>");
     }
 }
+$("#multiplechoices").on("click", function(event) {
+    if ($(this).text() == questionsArray[currentQuestion].correctAnswer) {
+        alert("Correct");
+        currentQuestion++;
+        currentScore++;
+        $("#score").append(currentScore);
+        newQuestion();
+    }else {
+        alert("incorrect");
+        currentQuestion++;
+        currentScore--;
+        newQuestion();
+    }
+});
+    /**If the user clicks on an li that matches correctAnswer
+     * increment score by 5
+     * display correct message
+     * increment currentQuestion
+     * load next question until the iteration # <= length of the question array
+     * 
+     * else decrement score by 5
+     * diplay incorrect message
+     * increment currentQuestion
+     * load next question until the iteration # <= length of the question array
+     */
 
 
 });
