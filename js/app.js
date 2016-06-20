@@ -12,6 +12,7 @@ $(document).ready(function() {
  */
     var currentQuestion = 0;
     var currentScore = 0;
+    
     var questionsArray = [
         {
             question: "Question #1: YES In which state is the Sequoia National Park?",
@@ -59,6 +60,9 @@ $(document).ready(function() {
             correctAnswer: "Montana"
         }
     ]
+    var questionsLeft = questionsArray.length;
+    $("#questioncount").text(questionsLeft);
+    
     $("#clicktobegin").css("display", "inline-block");
     $("#clicktobegin").on("click", function(event){
         $(this).css("display", "none");
@@ -74,17 +78,24 @@ function newQuestion() {
         $("#multiplechoices").append("<li>" + questionsArray[currentQuestion].choicesArray[i] + "</li>");
     }
 }
-$("#multiplechoices").on("click", function(event) {
-    if ($(this).text() == questionsArray[currentQuestion].correctAnswer) {
+$("#multiplechoices").on("click", "li", function(event) {
+    if ($(this).text() === questionsArray[currentQuestion].correctAnswer) {
         alert("Correct");
         currentQuestion++;
         currentScore++;
-        $("#score").append(currentScore);
+        questionsLeft--;
+        $("#questioncount").text(questionsLeft);
+        $("#score").text(currentScore);
+        $("#multiplechoices").empty();
         newQuestion();
     }else {
-        alert("incorrect");
+        alert("Incorrect");
         currentQuestion++;
         currentScore--;
+        questionsLeft--;
+        $("#questioncount").text(questionsLeft);
+        $("#score").text(currentScore);
+        $("#multiplechoices").empty();
         newQuestion();
     }
 });
