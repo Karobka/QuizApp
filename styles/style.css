@@ -17,10 +17,12 @@ time, mark, audio, video {
 }
 
 @media only screen and (max-width: 1024px) {
-    #statsbox {
-        height: 8em;
+
+    #wrapper {
+        background-color: pink;
     }
 }
+
 
 * {
     -webkit-box-sizing: border-box;
@@ -73,24 +75,13 @@ h2 {
     line-height: 13em;
 }
 
-.state {
-    width: 19em;
-    display: inline-block;
-}
-
-#maparea {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 77em;
-}
-
-#statsbox {
-    height: 4em;
+#statsboxinfo {
+    height: 4%;
     background: rgba(0, 0, 0, 0.5);
 }
 
-.mefooter {
-    height: 2em;
+.smallfooter {
+    height: 2%;
     background: rgba(0, 0, 0, 0.5);
 }
 
@@ -100,17 +91,13 @@ h2 {
 
 
 #statsboxinfo,
-.mefooter {
+.smallfooter {
     text-align: center;
 }
 
 #choices {
-    height: 19em;
+    height: 19%;
     text-align: center;
-}
-
-#california {
-    width: 10em;
 }
 
 #clicktobegin,
@@ -137,16 +124,16 @@ h2 {
     cursor: pointer;
 }
 
-span,
+#statsboxinfo{
+    vertical-align: middle;
+    line-height: 4em;
+    font-size: x-large;  
+}
 #multiplechoices > li {
     display: inline-block;
     vertical-align: middle;
     line-height: 4em;
     font-size: x-large;
-}
-
-span {
-    line-height: 2.5em;
 }
 
 #score {
@@ -157,9 +144,20 @@ span {
 }
 #questioncount {
     width:17%;
+    
 }
 
-.mefooter > li {
+#score,
+#questiontext,
+#questioncount {
+    margin-right: auto;
+    margin-left: auto;
+    display: inline-block;
+}
+
+
+
+.smallfooter > li {
     font-size: 1em;
     display: inline-block;
     margin: 0.5em 4.8em;
@@ -167,7 +165,7 @@ span {
 
 }
 
-.mefooter {
+.smallfooter {
     border-top: 1px solid #35421e;
     border-bottom: 1px solid #35421e;
 }

@@ -108,6 +108,7 @@ $("#multiplechoices").on("click", "li", function(event) {
     }
 });
 
+/** Update question count, score, finalscore, and empty out choices */
 function updateUi() {
         $("#questioncount").text("Questions left: " + questionsLeft);
         $("#score").text("Score: " + currentScore);
@@ -115,6 +116,7 @@ function updateUi() {
         $("#multiplechoices").empty();
 }
 
+/** Hide stats, show score, show new game button */
 function endGame() {
         $("#overlayscore").css("display", "block");
         $("#statsboxinfo").css("display", "none");
@@ -132,17 +134,4 @@ function endGame() {
             newQuestion();
         });
 }
-    /**If the user clicks on an li that matches correctAnswer
-     * increment score by 5
-     * display correct message
-     * increment currentQuestion
-     * load next question until the iteration # <= length of the question array
-     * 
-     * else decrement score by 5
-     * diplay incorrect message
-     * increment currentQuestion
-     * load next question until the iteration # <= length of the question array
-     */
-
-
 });
