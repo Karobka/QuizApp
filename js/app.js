@@ -73,7 +73,7 @@ $(document).ready(function() {
         $(this).css("display", "none");
         $("#statsboxinfo").css('display', 'block');
         $("#questioncount").text("Questions left: " + questionsLeft);
-        $("#score").text("Score: " + currentScore);
+        $("#score").text("Correct:" + currentScore + "/10");
         $("#multiplechoices".li).css("display", "inline-block");
         $("button").css("display", "inline-block");
         newQuestion();
@@ -101,7 +101,6 @@ $("#multiplechoices").on("click", "li", function(event) {
     }else {
         $("#overlayincorrect").css("display", "block").fadeOut(2000);
         currentQuestion++;
-        currentScore--;
         questionsLeft--;
         updateUi();
         newQuestion();
@@ -111,7 +110,7 @@ $("#multiplechoices").on("click", "li", function(event) {
 /** Update question count, score, finalscore, and empty out choices */
 function updateUi() {
         $("#questioncount").text("Questions left: " + questionsLeft);
-        $("#score").text("Score: " + currentScore);
+        $("#score").text("Correct:" + currentScore + "/10");
         $("#finalscore").text(currentScore);
         $("#multiplechoices").empty();
 }
