@@ -80,7 +80,7 @@ function newQuestion() {
 }
 $("#multiplechoices").on("click", "li", function(event) {
     if ($(this).text() === questionsArray[currentQuestion].correctAnswer) {
-        alert("Correct");
+        $("#overlaycorrect").css("display", "block").fadeOut(2000);
         currentQuestion++;
         currentScore++;
         questionsLeft--;
@@ -89,7 +89,7 @@ $("#multiplechoices").on("click", "li", function(event) {
         $("#multiplechoices").empty();
         newQuestion();
     }else {
-        alert("Incorrect");
+        $("#overlayincorrect").css("display", "block").fadeOut(2000);
         currentQuestion++;
         currentScore--;
         questionsLeft--;

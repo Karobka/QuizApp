@@ -47,6 +47,22 @@ h1 {
     height: 27em;
 }
 
+h2 {
+    font-size: 6em;
+}
+
+#overlaycorrect,
+#overlayincorrect {
+    background: rgba(0, 0, 0);
+    background-image: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0.75), rgba(0,0,0,0.2));
+    display: none; /** toggle visibilty with jQuery **/
+    padding: 0em;
+    height: 13em;
+    z-index: 1;
+    text-align: center;
+    line-height: 13em;
+}
+
 .state {
     width: 19em;
     display: inline-block;
