@@ -29,6 +29,11 @@ $(document).ready(function() {
             choicesArray: ["Hawaii", "Texas", "Washington", "Montana"],
             correctAnswer: "Hawaii"
         },
+         {
+            question: "Question #4: In which state is the Badlands National Park?",
+            choicesArray: ["South Dakota", "California", "Arizona", "Wyoming"],
+            correctAnswer: "Arkansas"
+        },
         {
             question: "Question #5: In which state is the Hot Springs National Park?",
             choicesArray: ["South Dakota", "California", "Montana", "Arkansas"],
@@ -67,20 +72,21 @@ $(document).ready(function() {
     $("#clicktobegin").on("click", function(event){
         $(this).css("display", "none");
         $("#statsboxinfo").css('display', 'block');
+        $("#questioncount").text("Questions left: " + questionsLeft);
+        $("#score").text("Score: " + currentScore);
         $("#multiplechoices".li).css("display", "inline-block");
         $("button").css("display", "inline-block");
         newQuestion();
     });
 
 function newQuestion() {
-    if (currentQuestion < questionsArray.length -1) {
+    if (currentQuestion <= questionsArray.length - 1) {
         $("#questiontext").text(questionsArray[currentQuestion].question);
         for (var i=0; i<questionsArray[currentQuestion].choicesArray.length; i++){
             $("#multiplechoices").append("<li>" + questionsArray[currentQuestion].choicesArray[i] + "</li>");
         }
     } else {
-        $("#overlayscore").css("display", "block");
-        $("#statsboxinfo").css("display", "none");
+        endGame();
     }
 }
 
@@ -90,21 +96,42 @@ $("#multiplechoices").on("click", "li", function(event) {
         currentQuestion++;
         currentScore++;
         questionsLeft--;
-        $("#questioncount").text(questionsLeft);
-        $("#score").text(currentScore);
-        $("#multiplechoices").empty();
+        updateUi();
         newQuestion();
     }else {
         $("#overlayincorrect").css("display", "block").fadeOut(2000);
         currentQuestion++;
         currentScore--;
         questionsLeft--;
-        $("#questioncount").text(questionsLeft);
-        $("#score").text(currentScore);
-        $("#multiplechoices").empty();
+        updateUi();
         newQuestion();
     }
 });
+
+function updateUi() {
+        $("#questioncount").text("Questions left: " + questionsLeft);
+        $("#score").text("Score: " + currentScore);
+        $("#finalscore").text(currentScore);
+        $("#multiplechoices").empty();
+}
+
+function endGame() {
+        $("#overlayscore").css("display", "block");
+        $("#statsboxinfo").css("display", "none");
+        $("#newgame").css("display", "inline-block");
+        $("#newgame").on("click", function(event){
+            $(this).css("display", "none");
+            currentQuestion = 0;
+            questionsLeft = questionsArray.length;
+            currentScore = 0;
+            $("#statsboxinfo").css('display', 'block');
+            $("#multiplechoices".li).css("display", "inline-block");
+            $("button").css("display", "inline-block");
+            $("#overlayscore").css("display", "none");
+            updateUi();
+            newQuestion();
+        });
+}
     /**If the user clicks on an li that matches correctAnswer
      * increment score by 5
      * display correct message
