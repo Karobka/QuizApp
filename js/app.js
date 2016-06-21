@@ -15,7 +15,7 @@ $(document).ready(function() {
     
     var questionsArray = [
         {
-            question: "Question #1: YES In which state is the Sequoia National Park?",
+            question: "Question #1: In which state is the Sequoia National Park?",
             choicesArray: ["Utah", "Arkansas", "California", "Idaho"],
             correctAnswer: "California"
         },
@@ -37,7 +37,7 @@ $(document).ready(function() {
         {
             question: "Question #6: In which state is the Mount Rainier National Park?",
             choicesArray: ["Maine", "Washington", "Idaho", "South Dakota"],
-            correctAnswer: "Washinton"
+            correctAnswer: "Washington"
         },
         {
             question: "Question #7: In which state is the Bryce Canyon National Park?",
@@ -58,7 +58,7 @@ $(document).ready(function() {
             question: "Question #10: In which state is the Glacier National Park?",
             choicesArray: ["Alaska", "Montana", "Oregon", "South Dakota"],
             correctAnswer: "Montana"
-        }
+        },
     ]
     var questionsLeft = questionsArray.length;
     $("#questioncount").text(questionsLeft);
@@ -73,11 +73,17 @@ $(document).ready(function() {
     });
 
 function newQuestion() {
-    $("#questiontext").text(questionsArray[currentQuestion].question);
-    for (var i=0; i<questionsArray[currentQuestion].choicesArray.length; i++){
-        $("#multiplechoices").append("<li>" + questionsArray[currentQuestion].choicesArray[i] + "</li>");
+    if (currentQuestion < questionsArray.length -1) {
+        $("#questiontext").text(questionsArray[currentQuestion].question);
+        for (var i=0; i<questionsArray[currentQuestion].choicesArray.length; i++){
+            $("#multiplechoices").append("<li>" + questionsArray[currentQuestion].choicesArray[i] + "</li>");
+        }
+    } else {
+        $("#overlayscore").css("display", "block");
+        $("#statsboxinfo").css("display", "none");
     }
 }
+
 $("#multiplechoices").on("click", "li", function(event) {
     if ($(this).text() === questionsArray[currentQuestion].correctAnswer) {
         $("#overlaycorrect").css("display", "block").fadeOut(2000);
