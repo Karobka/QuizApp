@@ -24,6 +24,9 @@ time, mark, audio, video {
     }
 }
 
+i {
+    vertical-align: middle;
+}
 
 * {
     -webkit-box-sizing: border-box;
