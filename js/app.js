@@ -52,7 +52,7 @@ var questionsArray = [
         choicesArray: ["Alaska", "Montana", "Oregon", "South Dakota"],
         correctAnswer: "Montana"
     },
-]
+];
 var questionsLeft = questionsArray.length;
 function newQuestion() {
     if (currentQuestion <= questionsArray.length - 1) {

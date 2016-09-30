@@ -16,14 +16,6 @@ time, mark, audio, video {
 	border: 0;
 }
 
-@media only screen and (max-width: 500px) {
-    #score,
-    #questiontext,
-    #questioncount{
-        
-    }
-}
-
 i {
     vertical-align: middle;
 }
@@ -137,8 +129,6 @@ button,
 }
 
 .statsboxinfo{
-    vertical-align: middle;
-    line-height: 4em;
     font-size: x-large;  
 }
 button,
@@ -148,28 +138,16 @@ button,
     line-height: 4em;
     font-size: x-large;
 }
-
 .score {
-    width:11%;
-    white-space: nowrap;
+    float: left;
 }
+
+.questioncount {
+    float: right;
+}
+
 .questiontext {
-    width:71%;
-    white-space: nowrap;
 }
-.questioncount {
-    width:17%;
-    white-space: nowrap;
-}
-
-.score,
-.questiontext,
-.questioncount {
-    margin-right: auto;
-    margin-left: auto;
-    display: inline-block;
-}
-
 .smallfooter > li {
     font-size: 1em;
     display: inline-block;
@@ -177,12 +155,13 @@ button,
     text-align: center;
 
 }
-
 .smallfooter {
     border-top: 1px solid #35421e;
     border-bottom: 1px solid #35421e;
 }
-
+@media screen and (max-width: 640px){
+    
+}
 
 
 
