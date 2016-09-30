@@ -1,4 +1,3 @@
-"use strict";
 var currentQuestion = 0;
 var currentScore = 0;
 
@@ -78,7 +77,7 @@ function endGame() {
     $(".overlayscore").css("display", "block");
     $(".statsboxinfo").css("display", "none");
     $(".newgame").css("display", "inline-block");
-    $(".newgame").on("click", function (event) {
+    $(".newgame").on("click", function () {
         $(this).css("display", "none");
         currentQuestion = 0;
         questionsLeft = questionsArray.length;
@@ -98,13 +97,12 @@ function showHud() {
     $(".multiplechoices".button).css("display", "inline-block");
     $("button").css("display", "inline-block");
 }
-
 function progressThebar() { 
     var width = 1;
-    var id = setInterval(frame, 25);
+    var progress_num = setInterval(frame, 25);
     function frame() {
         if (width >= 100) {
-            clearInterval(id);
+            clearInterval(progress_num);
         } else {
             width++;
             $(".progress_bar").css("width", width + "%");
@@ -112,13 +110,15 @@ function progressThebar() {
     }
 }
 function resetProgressbar() {
-    $(".progress_bar").css("width", "1%");
+    $(".progress_bar").css("width", "0%");
 }
 $(document).ready(function () {
+    $(".progress_wrap").toggle();
     $(".questioncount").text(questionsLeft);
     $(".clicktobegin").css("display", "inline-block");
     $(".clicktobegin").on("click", function (event) {
         $(this).css("display", "none");
+        $(".progress_wrap").toggle();
         showHud();
         newQuestion();
     });
