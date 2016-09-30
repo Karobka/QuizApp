@@ -34,9 +34,18 @@ body {
 .header {
     text-align: center;
     color: white;
-    height: 4em;
     background: rgba(0, 0, 0, 0.5);
-    padding-top: 0.75em;
+    padding: 20px;
+}
+.score {
+    float: left;
+}
+.questioncount {
+    float: right;
+}
+.score,
+.questioncount {
+    margin: 15px;
 }
 h1 {
     font-weight: 100;
@@ -102,52 +111,27 @@ h2 {
     height: 19%;
     text-align: center;
 }
-.clicktobegin,
-.newgame,
-button,
-.multiplechoices > li {
+
+button {
     height: 4em;
     width: 11em;
-    display: none; /** toggle to inline-block in JS **/
-    text-align: center;
+    display: none;
     background: #253950;
-    border-radius: 3px;
+    border-radius: 2px;
     margin: 1em;
-    font-size: 1em;
     border: 1px solid black;
-    vertical-align: middle;
-    line-height: 4em;
     font-size: x-large;
 }
-
-.clicktobegin:hover,
-.newgame,
-button,
-.multiplechoices > li:hover{
+button:hover{
     border: 1px solid #35421e;
     cursor: pointer;
 }
-
 .statsboxinfo{
     font-size: x-large;
     padding: 10px;
 }
-button,
-.multiplechoices > li {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 4em;
-    font-size: x-large;
-}
-.score {
-    float: left;
-}
-
-.questioncount {
-    float: right;
-}
-
 .questiontext {
+    /* Do I need any styles? */
 }
 .smallfooter > li {
     font-size: 1em;

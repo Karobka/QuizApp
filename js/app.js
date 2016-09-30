@@ -58,8 +58,9 @@ function newQuestion() {
     if (currentQuestion <= questionsArray.length - 1) {
         $(".questiontext").text(questionsArray[currentQuestion].question);
         for (var i = 0; i < questionsArray[currentQuestion].choicesArray.length; i++) {
-            $(".multiplechoices").append("<button>" + questionsArray[currentQuestion].choicesArray[i] + "</button>");
+            $(".multiplechoices").append("<button class='btn_choices'>" + questionsArray[currentQuestion].choicesArray[i] + "</button>");
         }
+        $(".btn_choices").css("display", "inline-block");
     } else {
         endGame();
     }
@@ -77,25 +78,14 @@ function endGame() {
     $(".overlayscore").css("display", "block");
     $(".statsboxinfo").css("display", "none");
     $(".newgame").css("display", "inline-block");
-    $(".newgame").on("click", function () {
-        $(this).css("display", "none");
-        currentQuestion = 0;
-        questionsLeft = questionsArray.length;
-        currentScore = 0;
-        $(".statsboxinfo").css('display', 'block');
-        $(".multiplechoices".button).css("display", "inline-block");
-        $("button").css("display", "inline-block");
-        $(".overlayscore").css("display", "none");
-        updateUi();
-        newQuestion();
-    });
+    $(".newgame").attr("disabled", false);
+    
 }
 function showHud() {
     $(".statsboxinfo").css("display", "block");
     $(".questioncount").text("Questions left: " + questionsLeft);
     $(".score").text("Correct: " + currentScore + "/10");
-    $(".multiplechoices".button).css("display", "inline-block");
-    $("button").css("display", "inline-block");
+    $(".btn_choices").css("display", "inline-block");
 }
 function progressThebar() { 
     var width = 1;
@@ -119,8 +109,8 @@ $(document).ready(function () {
     $(".clicktobegin").on("click", function (event) {
         $(this).css("display", "none");
         $(".progress_wrap").toggle();
-        showHud();
         newQuestion();
+        showHud();
     });
     $(".multiplechoices").on("click", "button", function () {
         progressThebar();
@@ -131,16 +121,28 @@ $(document).ready(function () {
             currentQuestion++;
             currentScore++;
             questionsLeft--;
-            setTimeout(updateUi, 3000);
-            setTimeout(newQuestion, 3000);
-            setTimeout(resetProgressbar, 3000);
+            setTimeout(updateUi, 2500);
+            setTimeout(newQuestion, 2500);
+            setTimeout(resetProgressbar, 2500);
         } else {
             $(".overlayincorrect").css("display", "block").fadeOut(2500);
             currentQuestion++;
             questionsLeft--;
-            setTimeout(updateUi, 3000);
-            setTimeout(newQuestion, 3000);
-            setTimeout(resetProgressbar, 3000);
+            setTimeout(updateUi, 2500);
+            setTimeout(newQuestion, 2500);
+            setTimeout(resetProgressbar, 2500);
         }
     });
+    $(".newgame").on("click", function () {
+        $(".newgame").css("display", "none");
+        currentQuestion = 0;
+        questionsLeft = questionsArray.length;
+        currentScore = 0;
+        $(".statsboxinfo").css('display', 'block');
+        $("button").attr("disabled", false);
+        $(".overlayscore").css("display", "none");
+        updateUi();
+        newQuestion();
+    });
+    
 });
