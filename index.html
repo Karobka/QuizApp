@@ -7,48 +7,51 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
-
 <body>
     <div>
-    <div id="wrapper">
-        <div id="header">
-            <h1>U.S. National Parks Quiz</h1>
-        </div>
-        <div id="overlaycorrect">
-            <h2>Correct!</h2>
-        </div>
-        <div id="overlayincorrect">
-            <h2>Incorrect!</h2>
-        </div>
-        <div id="overlayscore">
-            <h2>Your Final Score: <span id="finalscore"></span></h2>
-        </div>
-    </div>
-            <div id="statsboxinfo">
-                <section id="score"></section>
-                <section id="questiontext"></section>
-                <section id="questioncount"></section>
+        <div class="wrapper">
+            <div class="header">
+                <h1>U.S. National Parks Quiz</h1>
             </div>
-    <section id="choices">
-        <div id="clicktobegin">
-            <span>Click To Begin</span>
+            <div class="overlaycorrect">
+                <h2>Correct!</h2>
+            </div>
+            <div class="overlayincorrect">
+                <h2>Incorrect!</h2>
+            </div>
+            <div class="overlayscore">
+                <h2>Your Final Score: <span class="finalscore"></span></h2>
+            </div>
         </div>
-        <div id="newgame">
-            <span>Play Again</span>
+        <div class="statsboxinfo">
+            <section class="score"></section>
+            <section class="questiontext"></section>
+            <section class="questioncount"></section>
         </div>
-        <ul id="multiplechoices">
-        </ul>
-    </section>
-    <footer>
-        <ul class="smallfooter">
-            <li>Made by Tim Wright</li>
-            <i class="fa fa-code fa-2x" aria-hidden="true"></i>
-            <li>Find out more <a href="http://thepixeluprising.com">here</a></li>
-        </ul>
-    </footer>
+        <section class="choices">
+            <div class="progress_wrap">
+                <div class="progress_bar">
+                </div>
+            </div>
+            <div class="clicktobegin">
+                <span>Click To Begin</span>
+            </div>
+            <div class="newgame">
+                <span>Play Again</span>
+            </div>
+            <ul class="multiplechoices">
+            </ul>
+        </section>
+        <footer>
+            <ul class="smallfooter">
+                <li>Made by Tim Wright</li>
+                <i class="fa fa-code fa-2x" aria-hidden="true"></i>
+                <li>Find out more <a href="http://thepixeluprising.com">here</a></li>
+            </ul>
+        </footer>
 
-	<script src="https://code.jquery.com/jquery.min.js"></script>
-	<script src="js/app.js"></script>
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <script src="js/app.js"></script>
     </div>
 </body>
 </html>

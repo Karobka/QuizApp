@@ -39,7 +39,7 @@ body {
     background-color: #222222;
 }
 
-#header {
+.header {
     text-align: center;
     color: white;
     height: 4em;
@@ -50,7 +50,7 @@ h1 {
     font-weight: 100;
 }
 
-#wrapper {
+.wrapper {
     background-image: url("../images/Glacier_National_Park_sunset.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -62,13 +62,13 @@ h1 {
 h2 {
     font-size: 6em;
 }
-#finalscore {
+.finalscore {
     font-size: 1em;
 }
 
-#overlaycorrect,
-#overlayincorrect,
-#overlayscore {
+.overlaycorrect,
+.overlayincorrect,
+.overlayscore {
     background: rgba(0, 0, 0);
     background-image: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0.75), rgba(0,0,0,0.2));
     display: none; /** toggle visibilty with jQuery **/
@@ -79,34 +79,41 @@ h2 {
     line-height: 13em;
 }
 
-#statsboxinfo {
+.statsboxinfo {
     height: 8%;
     background: rgba(0, 0, 0, 0.5);
 }
-
+.progress_wrap {
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background-color: black;
+}
+.progress_bar {
+    position: absolute;
+    width: 1%;
+    height: 100%;
+    background-color: #35421e;
+}
 .smallfooter {
     height: 2%;
     background: rgba(0, 0, 0, 0.5);
 }
-
-#statsboxinfo {
+.statsboxinfo {
     display: none;  /** toggle on in jQuery **/
 }
-
-
-#statsboxinfo,
+.statsboxinfo,
 .smallfooter {
     text-align: center;
 }
-
-#choices {
+.choices {
     height: 19%;
     text-align: center;
 }
-
-#clicktobegin,
-#newgame,
-#multiplechoices > li {
+.clicktobegin,
+.newgame,
+button,
+.multiplechoices > li {
     height: 4em;
     width: 11em;
     display: none; /** toggle to inline-block in JS **/
@@ -121,47 +128,47 @@ h2 {
     font-size: x-large;
 }
 
-#clicktobegin:hover,
-#newgame,
-#multiplechoices > li:hover{
+.clicktobegin:hover,
+.newgame,
+button,
+.multiplechoices > li:hover{
     border: 1px solid #35421e;
     cursor: pointer;
 }
 
-#statsboxinfo{
+.statsboxinfo{
     vertical-align: middle;
     line-height: 4em;
     font-size: x-large;  
 }
-#multiplechoices > li {
+button,
+.multiplechoices > li {
     display: inline-block;
     vertical-align: middle;
     line-height: 4em;
     font-size: x-large;
 }
 
-#score {
+.score {
     width:11%;
     white-space: nowrap;
 }
-#questiontext {
+.questiontext {
     width:71%;
     white-space: nowrap;
 }
-#questioncount {
+.questioncount {
     width:17%;
     white-space: nowrap;
 }
 
-#score,
-#questiontext,
-#questioncount {
+.score,
+.questiontext,
+.questioncount {
     margin-right: auto;
     margin-left: auto;
     display: inline-block;
 }
-
-
 
 .smallfooter > li {
     font-size: 1em;
