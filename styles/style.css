@@ -141,7 +141,7 @@ button:hover{
     border-top: 1px solid #35421e;
     border-bottom: 1px solid #35421e;
 }
-@media screen and (max-width: 640px){
+@media screen and (max-width: 900px){
     button {
         height: 3em;
         width: 6em;
