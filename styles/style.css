@@ -61,7 +61,7 @@ h1 {
 }
 
 h2 {
-    font-size: 6em;
+    font-size: 2em;
 }
 .finalscore {
     font-size: 1em;
@@ -70,14 +70,12 @@ h2 {
 .overlaycorrect,
 .overlayincorrect,
 .overlayscore {
-    background: rgba(0, 0, 0);
     background-image: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0.75), rgba(0,0,0,0.2));
-    display: none; /** toggle visibilty with jQuery **/
-    padding: 0em;
+    display: none;
     height: 13em;
     z-index: 1;
     text-align: center;
-    line-height: 13em;
+    line-height: 2em;
 }
 
 .statsboxinfo {
@@ -127,7 +125,6 @@ button:hover{
     cursor: pointer;
 }
 .statsboxinfo{
-    font-size: x-large;
     padding: 10px;
 }
 .questiontext {
@@ -145,7 +142,14 @@ button:hover{
     border-bottom: 1px solid #35421e;
 }
 @media screen and (max-width: 640px){
-    
+    button {
+        height: 3em;
+        width: 6em;
+        margin: 0.5em;
+    }
+    .statsboxinfo {
+        font-size: x-large;
+    }
 }
 
 

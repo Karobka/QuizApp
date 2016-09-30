@@ -19,17 +19,17 @@ var questionsArray = [
     },
     {
         question: "Question #4: In which state is the Badlands National Park?",
-        choicesArray: ["South Dakota", "California", "Arizona", "Wyoming"],
+        choicesArray: ["S. Dakota", "California", "Arizona", "Wyoming"],
         correctAnswer: "Arkansas"
     },
     {
         question: "Question #5: In which state is the Hot Springs National Park?",
-        choicesArray: ["South Dakota", "California", "Montana", "Arkansas"],
+        choicesArray: ["S. Dakota", "California", "Montana", "Arkansas"],
         correctAnswer: "Arkansas"
     },
     {
         question: "Question #6: In which state is the Mount Rainier National Park?",
-        choicesArray: ["Maine", "Washington", "Idaho", "South Dakota"],
+        choicesArray: ["Maine", "Washington", "Idaho", "S. Dakota"],
         correctAnswer: "Washington"
     },
     {
@@ -49,7 +49,7 @@ var questionsArray = [
     },
     {
         question: "Question #10: In which state is the Glacier National Park?",
-        choicesArray: ["Alaska", "Montana", "Oregon", "South Dakota"],
+        choicesArray: ["Alaska", "Montana", "Oregon", "S. Dakota"],
         correctAnswer: "Montana"
     },
 ];
