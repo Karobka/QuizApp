@@ -111,8 +111,8 @@ h2 {
 }
 
 button {
-    height: 4em;
-    width: 11em;
+    height: 65px;
+    width: 150px;
     display: none;
     background: #253950;
     border-radius: 2px;
@@ -146,6 +146,7 @@ button:hover{
         height: 3em;
         width: 6em;
         margin: 0.5em;
+        background-color: pink;
     }
     .statsboxinfo {
         font-size: x-large;
