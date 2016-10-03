@@ -112,7 +112,7 @@ h2 {
 
 button {
     height: 65px;
-    width: 150px;
+    width: 200px;
     display: none;
     background: #253950;
     border-radius: 2px;
@@ -141,11 +141,12 @@ button:hover{
     border-top: 1px solid #35421e;
     border-bottom: 1px solid #35421e;
 }
-@media screen and (max-width: 900px){
+
+@media (max-width: 900px){
     button {
-        height: 3em;
-        width: 6em;
-        margin: 0.5em;
+        height: 100%;
+        width: 100%;
+        
         background-color: pink;
     }
     .statsboxinfo {
