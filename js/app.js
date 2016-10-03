@@ -56,7 +56,7 @@ var questionsArray = [
 var questionsLeft = questionsArray.length;
 function newQuestion() {
     if (currentQuestion <= questionsArray.length - 1) {
-        $(".questiontext").text(questionsArray[currentQuestion].question);
+        $(".questiontext").html("<p class='question'>" + questionsArray[currentQuestion].question + "</p>");
         for (var i = 0; i < questionsArray[currentQuestion].choicesArray.length; i++) {
             $(".multiplechoices").append("<button class='btn_choices'>" + questionsArray[currentQuestion].choicesArray[i] + "</button>");
         }
