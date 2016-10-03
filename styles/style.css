@@ -137,9 +137,6 @@ button:hover{
 }
 
 @media screen and (max-width: 1280px){
-    button {
-        background-color: pink;
-    }
     .statsboxinfo {
         font-size: x-large;
     }
@@ -151,11 +148,23 @@ button:hover{
      button {
          width: 50%;
          height: 64px;
-         background-color: yellow;
      }
      .wrapper {
          height: 360px;
      }
+     .score,
+     .questioncount {
+         margin-top: 50px;
+     }
+}
+
+@media screen and (max-width: 500px) {
+    .wrapper {
+        height: 256px;
+    }
+    button {
+        width: 40%;
+    }
 }
 
 
