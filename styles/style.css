@@ -144,7 +144,7 @@ button:hover{
         font-size: x-large;
     }
     .wrapper {
-        height: 300px;
+        height: 320px;
     }
 }
 @media screen and (max-width: 720px) {
@@ -154,7 +154,7 @@ button:hover{
          background-color: yellow;
      }
      .wrapper {
-         height: 400px;
+         height: 320px;
      }
 }
 
