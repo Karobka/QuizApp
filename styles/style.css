@@ -152,12 +152,7 @@ button:hover{
      .wrapper {
          height: 360px;
      }
-     .score,
-     .questioncount {
-         margin-top: 50px;
-     }
 }
-
 @media screen and (max-width: 500px) {
     .wrapper {
         height: 256px;
