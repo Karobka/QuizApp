@@ -138,17 +138,14 @@ button:hover{
 
 @media screen and (max-width: 1280px){
     button {
-        height: 100%;
-        width: 100%;
-        margin: 5px 0;
         background-color: pink;
     }
     .statsboxinfo {
         font-size: x-large;
     }
-    /*.wrapper {
-        height: 700px;
-    }*/
+    .wrapper {
+        height: 512px;
+    }
 }
 @media screen and (max-width: 720px) {
      button {
