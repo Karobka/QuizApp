@@ -104,7 +104,6 @@ function resetProgressbar() {
 }
 $(document).ready(function () {
     $(".progress_wrap").toggle();
-    $(".questioncount").text(questionsLeft);
     $(".clicktobegin").css("display", "inline-block");
     $(".clicktobegin").on("click", function (event) {
         $(this).css("display", "none");

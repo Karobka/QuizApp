@@ -38,20 +38,16 @@ body {
     padding: 20px;
     width: 100%;
 }
-.score {
-    float: left;
-}
 .questioncount {
     float: right;
-}
-.score,
-.questioncount {
-    margin: 15px;
 }
 h1 {
     font-weight: 100;
 }
-
+h2 {
+    font-size: 2em;
+    padding: 42px 0;
+}
 .wrapper {
     background-image: url("../images/Glacier_National_Park_sunset.jpg");
     background-repeat: no-repeat;
@@ -59,25 +55,17 @@ h1 {
     background-size: cover;
     height: 512px;
 }
-
-h2 {
-    font-size: 2em;
-}
 .finalscore {
     font-size: 1em;
 }
-
 .overlaycorrect,
 .overlayincorrect,
 .overlayscore {
     background-image: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0.75), rgba(0,0,0,0.2));
     display: none;
-    height: 13em;
     z-index: 1;
     text-align: center;
-    line-height: 2em;
 }
-
 .statsboxinfo {
     background: rgba(0, 0, 0, 0.5);
 }
@@ -124,18 +112,21 @@ button:hover{
 .question {
     padding: 15px;
 }
-.smallfooter > li {
+li {
     display: inline-block;
     margin: 0 50px;
-    text-align: center;
-
 }
 .smallfooter {
     border-top: 1px solid #35421e;
     border-bottom: 1px solid #35421e;
 }
 .score_question {
-        margin-top: 390px;
+    padding: 0 60px;
+    background-color: #000;
+}
+.questioncount,
+.score {
+    text-decoration: underline;
 }
 @media screen and (max-width: 1280px){
     .statsboxinfo {
@@ -143,9 +134,6 @@ button:hover{
     }
     .wrapper {
         height: 320px;
-    }
-    .score_question {
-        margin-top: 200px;
     }
 }
 @media screen and (max-width: 720px) {
@@ -167,8 +155,9 @@ button:hover{
     .header {
         padding: 10px;
     }
-    .score_question {
-        margin-top: 160px;
+    li {
+        display: inline-block;
+        margin: 0 8px;
     }
 }
 
