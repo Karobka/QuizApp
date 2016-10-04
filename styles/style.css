@@ -152,12 +152,15 @@ li {
     button {
         width: 40%;
     }
+    .clicktobegin {
+        width: 50%;
+    }
     .header {
         padding: 10px;
     }
     li {
         display: inline-block;
-        margin: 0 4px;
+        margin: 0;
     }
 }
 
