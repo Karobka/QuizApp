@@ -20,7 +20,7 @@ var questionsArray = [
     {
         question: "Question #4: In which state is the Badlands National Park?",
         choicesArray: ["S. Dakota", "California", "Arizona", "Wyoming"],
-        correctAnswer: "Arkansas"
+        correctAnswer: "S. Dakota"
     },
     {
         question: "Question #5: In which state is the Hot Springs National Park?",
