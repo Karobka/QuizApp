@@ -162,7 +162,8 @@ li {
     .wrapper {
     }
     button {
-        width: 40%;
+        margin: 10px;
+        width: 44%;
     }
     .clicktobegin {
         width: 50%;
@@ -172,6 +173,11 @@ li {
     }
     h1 {
         font-size: 4em;
+    }
+    .overlaycorrect,
+    .overlayincorrect,
+    .overlayscore {
+        top: 10%;
     }
 }
 
