@@ -24,8 +24,7 @@ i {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: 'Amatic SC', cursive;/*
-    font-family: 'Playfair Display', serif;*/
+    font-family: 'Quicksand', cursive;
     color: white;
 }
 .wrapper {
@@ -46,7 +45,7 @@ i {
 }
 h1 {
     font-weight: 100;
-    font-size: 9em;
+    font-size: 6em;
 }
 h2 {
     font-size: 2em;
@@ -105,6 +104,7 @@ button {
     margin: 15px;
     border: 2px solid #fff;
     font-size: x-large;
+    font-family: 'Jacques Francois', serif;
 }
 button:hover{
     border: 4px solid #fff;
