@@ -28,12 +28,16 @@ i {
     color: white;
 }
 .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .header {
     text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.ui_data {
     width: 100%;
     position: absolute;
     top: 50%;
@@ -56,19 +60,23 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+.score_question,
+.statsboxinfo {
+    font-size: 2em;
+}
 .finalscore {
     font-size: 1em;
 }
 .overlaycorrect,
 .overlayincorrect,
 .overlayscore {
-    background-image: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0.75), rgba(0,0,0,0.2));
     display: none;
     z-index: 1;
     text-align: center;
-}
-.statsboxinfo {
-    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .progress_wrap {
     position: relative;
@@ -121,11 +129,10 @@ li {
 }
 .score_question {
     padding: 0 60px;
-    background-color: #000;
 }
 .questioncount,
 .score {
-    text-decoration: underline;
+    font-size: large;
 }
 @media screen and (max-width: 1280px){
     .statsboxinfo {

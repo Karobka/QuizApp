@@ -106,7 +106,7 @@ $(document).ready(function () {
     $(".progress_wrap").toggle();
     $(".clicktobegin").css("display", "inline-block");
     $(".clicktobegin").on("click", function (event) {
-        $(this).css("display", "none");
+        $(".header").css("display", "none");
         $(".progress_wrap").toggle();
         newQuestion();
         showHud();
