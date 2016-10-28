@@ -3,52 +3,52 @@ var currentScore = 0;
 
 var questionsArray = [
     {
-        question: "Question #1: In which state is the Sequoia National Park?",
+        question: "Question #1: Where is Sequoia National Park?",
         choicesArray: ["Utah", "Arkansas", "California", "Idaho"],
         correctAnswer: "California"
     },
     {
-        question: "Question #2: In which state is the Arches National Park?",
+        question: "Question #2: Where is Arches National Park?",
         choicesArray: ["Nevada", "Utah", "Arkansas", "California"],
         correctAnswer: "Utah"
     },
     {
-        question: "Question #3: In which state is the Haleakala National Park?",
+        question: "Question #3: Where is Haleakala National Park?",
         choicesArray: ["Hawaii", "Texas", "Washington", "Montana"],
         correctAnswer: "Hawaii"
     },
     {
-        question: "Question #4: In which state is the Badlands National Park?",
+        question: "Question #4: Where is Badlands National Park?",
         choicesArray: ["S. Dakota", "California", "Arizona", "Wyoming"],
         correctAnswer: "S. Dakota"
     },
     {
-        question: "Question #5: In which state is the Hot Springs National Park?",
+        question: "Question #5: Where is Hot Springs National Park?",
         choicesArray: ["S. Dakota", "California", "Montana", "Arkansas"],
         correctAnswer: "Arkansas"
     },
     {
-        question: "Question #6: In which state is the Mount Rainier National Park?",
+        question: "Question #6: Where is Mount Rainier National Park?",
         choicesArray: ["Maine", "Washington", "Idaho", "S. Dakota"],
         correctAnswer: "Washington"
     },
     {
-        question: "Question #7: In which state is the Bryce Canyon National Park?",
+        question: "Question #7: Where is Bryce Canyon National Park?",
         choicesArray: ["Montana", "Maine", "California", "Utah"],
         correctAnswer: "Utah"
     },
     {
-        question: "Question #8: In which state is the Joshua Tree National Park?",
+        question: "Question #8: Where is Joshua Tree National Park?",
         choicesArray: ["California", "Nevada", "Idaho", "Hawaii"],
         correctAnswer: "California"
     },
     {
-        question: "Question #9: In which state is the Acadia National Park?",
+        question: "Question #9: Where is Acadia National Park?",
         choicesArray: ["Florida", "Idaho", "Maine", "Arizona"],
         correctAnswer: "Maine"
     },
     {
-        question: "Question #10: In which state is the Glacier National Park?",
+        question: "Question #10: Where is Glacier National Park?",
         choicesArray: ["Alaska", "Montana", "Oregon", "S. Dakota"],
         correctAnswer: "Montana"
     },
