@@ -115,10 +115,10 @@ body:before {
     background-color: #fff;
 }
 footer {
-    width: 100%;
-    position: absolute;
-    bottom: 40px;
     text-align: center;
+    position: fixed;
+   bottom: 0px;
+   width: 100%;
 }
 .statsboxinfo {
     display: none;  /** toggle on in jQuery **/
@@ -151,8 +151,6 @@ li {
     display: inline-block;
     margin: 0 50px;
 }
-.smallfooter {
-}
 .score_question {
     padding: 0 60px;
 }
@@ -162,7 +160,6 @@ li {
 }
 @media screen and (max-width: 720px) {
     .wrapper {
-        height: 256px;
     }
     button {
         width: 40%;
